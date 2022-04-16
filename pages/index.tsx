@@ -3,7 +3,9 @@ import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-const Lucid = dynamic(() => import('../components/TestLucid'))
+const Lucid = dynamic(() => import('../components/TestLucid'), {
+        ssr: false
+    })
 const Home: NextPage = () => {
   return (
     <div className={styles.container}>
